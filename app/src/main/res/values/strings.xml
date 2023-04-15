@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ArtInstituteOfChicagoApp</string>
+    <string name="show_artworks">Show Random Artworks</string>
+</resources>
