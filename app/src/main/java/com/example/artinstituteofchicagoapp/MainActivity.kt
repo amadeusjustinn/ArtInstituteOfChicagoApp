@@ -1,5 +1,6 @@
 package com.example.artinstituteofchicagoapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +12,8 @@ class MainActivity : AppCompatActivity() {
 
         val btnShowArtworks = findViewById<Button>(R.id.showArtworks)
         btnShowArtworks.setOnClickListener {
-
+            val intent = Intent(this, GalleryView::class.java)
+            startActivity(intent)
         }
     }
 }
