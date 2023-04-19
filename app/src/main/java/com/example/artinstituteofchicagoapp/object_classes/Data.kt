@@ -1,6 +1,6 @@
 package com.example.artinstituteofchicagoapp.object_classes
 
-data class ImgData(
+data class Data(
 	val alt_artist_ids: List<Any>,
 	val alt_classification_ids: List<String>,
 	val alt_image_ids: List<String>,
