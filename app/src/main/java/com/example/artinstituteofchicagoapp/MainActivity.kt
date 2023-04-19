@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
 
-		val btnShowArtworks = findViewById<Button>(R.id.showArtworks)
+		val btnShowArtworks: Button = findViewById<Button>(R.id.showArtworks)
 		btnShowArtworks.setOnClickListener {
 			val intent = Intent(this, GalleryView::class.java)
 			startActivity(intent)
