@@ -11,8 +11,7 @@ import com.example.artinstituteofchicagoapp.R
 import com.example.artinstituteofchicagoapp.object_classes.Data
 import com.squareup.picasso.Picasso
 
-class ImgAdapter(private val imgList: List<Data>) :
-	RecyclerView.Adapter<ImgAdapter.ViewHolder>() {
+class ImgAdapter(private val imgList: List<Data>) : RecyclerView.Adapter<ImgAdapter.ViewHolder>() {
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 		val view = LayoutInflater.from(parent.context).inflate(R.layout.grid_member, parent, false)
 		return ViewHolder(view)
@@ -20,6 +19,7 @@ class ImgAdapter(private val imgList: List<Data>) :
 
 	override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 		Log.d("Response", "Item count: $itemCount")
+		return holder.bind(imgList[position])
 	}
 
 	override fun getItemCount(): Int {
