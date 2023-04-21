@@ -3,6 +3,7 @@ package com.example.artinstituteofchicagoapp.services
 import android.content.Context
 import android.util.Log
 import android.widget.Toast
+import com.example.artinstituteofchicagoapp.GalleryView
 import com.example.artinstituteofchicagoapp.object_classes.ApiResp
 import com.example.artinstituteofchicagoapp.object_classes.Data
 import retrofit2.Call
@@ -10,7 +11,11 @@ import retrofit2.Callback
 import retrofit2.Response
 
 interface JsonService {
-	fun loadArtworks(artworksList: MutableList<Data>, context: Context) {
+	fun loadArtworks(
+		artworksList: MutableList<Data>,
+		obs: GalleryView.HasLoaded,
+		context: Context
+	) {
 		val service = ServiceBuilder.buildService(GetService::class.java)
 		val requestCall = service.getArtworks()
 
@@ -23,6 +28,7 @@ interface JsonService {
 						artworksList.add(artwork)
 					}
 					Log.d("isSuccessful", "Api response size: ${artworksList.size}")
+					obs.setVal(true)
 				} else {
 					Log.d("isNotSuccessful", "JsonService onResponse")
 					Toast.makeText(

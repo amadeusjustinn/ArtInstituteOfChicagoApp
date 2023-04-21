@@ -1,6 +1,5 @@
 package com.example.artinstituteofchicagoapp.helpers
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,7 +19,6 @@ class ImgAdapter(private val artworksList: MutableList<Data>) :
 	}
 
 	override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-		Log.d("onBindViewHolder", "Item count: $itemCount")
 		return holder.bind(artworksList[position])
 	}
 
