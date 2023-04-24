@@ -6,29 +6,30 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/artworkImg"
+        android:id="@+id/gridArtworkImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/grid_img"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/artworkTitle"
+        android:id="@+id/gridArtworkTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/artworkImg" />
+        app:layout_constraintTop_toBottomOf="@+id/gridArtworkImg" />
 
     <TextView
-        android:id="@+id/artworkArtist"
+        android:id="@+id/gridArtworkArtist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/artworkTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/gridArtworkTitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

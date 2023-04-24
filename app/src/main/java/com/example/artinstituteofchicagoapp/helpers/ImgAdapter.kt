@@ -27,9 +27,9 @@ class ImgAdapter(private val artworksList: MutableList<Data>) :
 	}
 
 	class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-		private var artworkImg = itemView.findViewById<ImageView>(R.id.artworkImg)
-		private var artworkTitle = itemView.findViewById<TextView>(R.id.artworkTitle)
-		private var artworkArtist = itemView.findViewById<TextView>(R.id.artworkArtist)
+		private var artworkImg = itemView.findViewById<ImageView>(R.id.gridArtworkImg)
+		private var artworkTitle = itemView.findViewById<TextView>(R.id.gridArtworkTitle)
+		private var artworkArtist = itemView.findViewById<TextView>(R.id.gridArtworkArtist)
 
 		fun bind(artwork: Data) {
 			Picasso.get()

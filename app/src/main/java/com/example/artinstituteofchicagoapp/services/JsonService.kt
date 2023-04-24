@@ -21,14 +21,15 @@ interface JsonService {
 
 		requestCall.enqueue(object : Callback<ApiResp> {
 			override fun onResponse(call: Call<ApiResp>, response: Response<ApiResp>) {
-				val apiResp = response.body()
+				val apiResp: ApiResp? = response.body()
 				Log.d("Response", "onResponse: $apiResp")
+
 				if (response.isSuccessful) {
 					for (artwork in apiResp!!.data) {
 						artworksList.add(artwork)
 					}
-					Log.d("isSuccessful", "Api response size: ${artworksList.size}")
 					obs.setVal(true)
+					Log.d("isSuccessful", "Api response size: ${artworksList.size}")
 				} else {
 					Log.d("isNotSuccessful", "JsonService onResponse")
 					Toast.makeText(

@@ -1,5 +1,7 @@
 package com.example.artinstituteofchicagoapp.object_classes
 
+import net.danlew.android.joda.JodaTimeAndroid
+
 data class Data(
 	val alt_artist_ids: List<Any>,
 	val alt_classification_ids: List<String>,
@@ -77,6 +79,7 @@ data class Data(
 	val site_ids: List<Any>,
 	val sound_ids: List<Any>,
 	val source_updated_at: String,
+	val source_updated_at_dt: JodaTimeAndroid,
 	val style_id: String,
 	val style_ids: List<String>,
 	val style_title: String,
@@ -94,7 +97,9 @@ data class Data(
 	val theme_titles: List<String>,
 	val thumbnail: Thumbnail,
 	val timestamp: String,
+	val timestamp_dt: JodaTimeAndroid,
 	val title: String,
 	val updated_at: String,
+	val updated_at_dt: JodaTimeAndroid,
 	val video_ids: List<Any>
 )
