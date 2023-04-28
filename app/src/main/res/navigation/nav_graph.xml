@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/nav_graph"
+	app:startDestination="@id/mainMenuFragment">
+
+	<fragment
+		android:id="@+id/mainMenuFragment"
+		android:name="com.example.artinstituteofchicagoapp.MainMenuFragment"
+		android:label="Main menu"
+		tools:layout="@layout/main_menu">
+		<action
+			android:id="@+id/action_mainMenuFragment_to_galleryViewFragment"
+			app:destination="@id/galleryViewFragment" />
+	</fragment>
+
+	<fragment
+		android:id="@+id/galleryViewFragment"
+		android:name="com.example.artinstituteofchicagoapp.GalleryViewFragment"
+		android:label="Gallery view"
+		tools:layout="@layout/fragment_gallery_view" />
+</navigation>

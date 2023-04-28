@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.view.ViewCompat.setTransitionName
 import androidx.recyclerview.widget.RecyclerView
 import com.example.artinstituteofchicagoapp.R
 import com.example.artinstituteofchicagoapp.object_classes.Data
@@ -32,6 +33,7 @@ class ImgAdapter(private val artworksList: MutableList<Data>) :
 		private var artworkArtist = itemView.findViewById<TextView>(R.id.gridArtworkArtist)
 
 		fun bind(artwork: Data) {
+			setTransitionName(artworkImg, artwork.id.toString())
 			Picasso.get()
 				.load("https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg/")
 				.into(artworkImg)

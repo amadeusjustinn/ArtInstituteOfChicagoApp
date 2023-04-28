@@ -1,7 +1,10 @@
 package com.example.artinstituteofchicagoapp
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.artinstituteofchicagoapp.helpers.ImgAdapter
@@ -9,23 +12,31 @@ import com.example.artinstituteofchicagoapp.object_classes.Data
 import com.example.artinstituteofchicagoapp.services.JsonService
 import kotlin.properties.Delegates
 
-class GalleryView : AppCompatActivity(), JsonService {
+class GalleryViewFragment : Fragment(), JsonService {
+	private val context = this@GalleryViewFragment.getContext()
 	private val artworksList = mutableListOf<Data>()
 	private val imgAdapter = ImgAdapter(artworksList)
 	private val hasLoaded = HasLoaded(imgAdapter)
 
-	override fun onCreate(savedInstanceState: Bundle?) {
-		super.onCreate(savedInstanceState)
-		setContentView(R.layout.gallery_view)
+	override fun onCreateView(
+		inflater: LayoutInflater,
+		container: ViewGroup?,
+		savedInstanceState: Bundle?
+	): View? {
+		return inflater.inflate(R.layout.fragment_gallery_view, container, false)
+	}
 
-		val galleryView = findViewById<RecyclerView>(R.id.GalleryView)
+	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+		super.onViewCreated(view, savedInstanceState)
+
+		val galleryView = view.findViewById<RecyclerView>(R.id.galleryView)
 		galleryView.apply {
 			setHasFixedSize(true)
-			layoutManager = GridLayoutManager(this@GalleryView, 2)
+			layoutManager = GridLayoutManager(context, 2)
 			adapter = imgAdapter
 		}
 
-		loadArtworks(artworksList, hasLoaded, this@GalleryView)
+		loadArtworks(artworksList, hasLoaded, context)
 	}
 
 	/**
