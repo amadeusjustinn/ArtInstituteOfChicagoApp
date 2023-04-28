@@ -13,7 +13,6 @@ import com.example.artinstituteofchicagoapp.services.JsonService
 import kotlin.properties.Delegates
 
 class GalleryViewFragment : Fragment(), JsonService {
-	private val context = this@GalleryViewFragment.getContext()
 	private val artworksList = mutableListOf<Data>()
 	private val imgAdapter = ImgAdapter(artworksList)
 	private val hasLoaded = HasLoaded(imgAdapter)

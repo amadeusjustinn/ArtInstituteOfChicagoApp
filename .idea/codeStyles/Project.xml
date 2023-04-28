@@ -45,7 +45,7 @@
                 <AND>
                   <NAME>.*:id</NAME>
                   <XML_ATTRIBUTE />
-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android\n\t\t\t\t\t\t\t\t\t</XML_NAMESPACE>
+                  <XML_NAMESPACE>\n\t\t\t\t\t\t\t\t\t\thttp://schemas.android.com/apk/res/android\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</XML_NAMESPACE>
                 </AND>
               </match>
             </rule>
@@ -56,7 +56,7 @@
                 <AND>
                   <NAME>.*:name</NAME>
                   <XML_ATTRIBUTE />
-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android\n\t\t\t\t\t\t\t\t\t</XML_NAMESPACE>
+                  <XML_NAMESPACE>\n\t\t\t\t\t\t\t\t\t\thttp://schemas.android.com/apk/res/android\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</XML_NAMESPACE>
                 </AND>
               </match>
             </rule>
@@ -101,7 +101,7 @@
                 <AND>
                   <NAME>.*</NAME>
                   <XML_ATTRIBUTE />
-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android\n\t\t\t\t\t\t\t\t\t</XML_NAMESPACE>
+                  <XML_NAMESPACE>\n\t\t\t\t\t\t\t\t\t\thttp://schemas.android.com/apk/res/android\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</XML_NAMESPACE>
                 </AND>
               </match>
               <order>ANDROID_ATTRIBUTE_ORDER</order>
