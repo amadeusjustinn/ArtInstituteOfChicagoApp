@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.artinstituteofchicagoapp.data_classes.Data
 import com.example.artinstituteofchicagoapp.helpers.ImgAdapter
-import com.example.artinstituteofchicagoapp.object_classes.Data
 import com.example.artinstituteofchicagoapp.services.JsonService
 import kotlin.properties.Delegates
 

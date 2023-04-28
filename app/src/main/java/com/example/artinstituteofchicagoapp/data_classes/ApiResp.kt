@@ -1,4 +1,4 @@
-package com.example.artinstituteofchicagoapp.object_classes
+package com.example.artinstituteofchicagoapp.data_classes
 
 data class ApiResp(
 	val config: Config,

@@ -7,9 +7,9 @@
 
 	<fragment
 		android:id="@+id/mainMenuFragment"
-		android:name="com.example.artinstituteofchicagoapp.MainMenuFragment"
 		android:label="Main menu"
-		tools:layout="@layout/main_menu">
+		android:name="com.example.artinstituteofchicagoapp.MainMenuFragment"
+		tools:layout="@layout/fragment_main_menu">
 		<action
 			android:id="@+id/action_mainMenuFragment_to_galleryViewFragment"
 			app:destination="@id/galleryViewFragment" />
@@ -17,7 +17,7 @@
 
 	<fragment
 		android:id="@+id/galleryViewFragment"
-		android:name="com.example.artinstituteofchicagoapp.GalleryViewFragment"
 		android:label="Gallery view"
+		android:name="com.example.artinstituteofchicagoapp.GalleryViewFragment"
 		tools:layout="@layout/fragment_gallery_view" />
 </navigation>

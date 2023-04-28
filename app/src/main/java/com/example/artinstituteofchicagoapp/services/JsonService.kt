@@ -4,8 +4,8 @@ import android.content.Context
 import android.util.Log
 import android.widget.Toast
 import com.example.artinstituteofchicagoapp.GalleryViewFragment
-import com.example.artinstituteofchicagoapp.object_classes.ApiResp
-import com.example.artinstituteofchicagoapp.object_classes.Data
+import com.example.artinstituteofchicagoapp.data_classes.ApiResp
+import com.example.artinstituteofchicagoapp.data_classes.Data
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

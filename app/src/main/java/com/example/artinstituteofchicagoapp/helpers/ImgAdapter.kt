@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.core.view.ViewCompat.setTransitionName
 import androidx.recyclerview.widget.RecyclerView
 import com.example.artinstituteofchicagoapp.R
-import com.example.artinstituteofchicagoapp.object_classes.Data
+import com.example.artinstituteofchicagoapp.data_classes.Data
 import com.squareup.picasso.Picasso
 
 class ImgAdapter(private val artworksList: MutableList<Data>) :
