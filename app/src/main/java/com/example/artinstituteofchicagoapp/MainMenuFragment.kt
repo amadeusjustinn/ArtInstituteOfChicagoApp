@@ -20,13 +20,16 @@ class MainMenuFragment : Fragment() {
 		super.onViewCreated(view, savedInstanceState)
 
 		val fragmentManager = activity?.supportFragmentManager
-		val btnShowArtworks = view.findViewById<Button>(R.id.showArtworks)
+		val btnShowArtworks = view.findViewById<Button>(R.id.button_show_artworks)
 		btnShowArtworks.setOnClickListener {
 			val galleryViewFragment = GalleryViewFragment()
 			val transaction = fragmentManager?.beginTransaction()
-			transaction?.replace(R.id.navHostFragment, galleryViewFragment)
-				?.addToBackStack(null)
-				?.commit()
+			transaction?.apply {
+				setReorderingAllowed(true)
+				replace(R.id.navHostFragment, galleryViewFragment)
+				addToBackStack(null)
+				commit()
+			}
 		}
 	}
 }

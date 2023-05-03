@@ -8,11 +8,12 @@
 
 	<ImageView
 		android:contentDescription="@string/detail_img"
-		android:id="@+id/detailArtworkImg"
+		android:id="@+id/image_artwork_detailview"
 		android:layout_height="wrap_content"
 		android:layout_marginBottom="500dp"
 		android:layout_marginTop="30dp"
 		android:layout_width="wrap_content"
+		android:transitionName="image_big"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
@@ -21,24 +22,24 @@
 		tools:srcCompat="@tools:sample/avatars" />
 
 	<TextView
-		android:id="@+id/detailArtworkTitle"
+		android:id="@+id/text_title_detailview"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="8dp"
 		android:layout_width="wrap_content"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.5"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/detailArtworkImg" />
+		app:layout_constraintTop_toBottomOf="@+id/image_artwork_detailview" />
 
 	<TextView
-		android:id="@+id/detailArtworkArtist"
+		android:id="@+id/text_artist_detailview"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="8dp"
 		android:layout_width="wrap_content"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.5"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/detailArtworkTitle" />
+		app:layout_constraintTop_toBottomOf="@+id/text_title_detailview" />
 
 	<!--    <TextView-->
 	<!--        android:id="@+id/detailArtworkTitle"-->

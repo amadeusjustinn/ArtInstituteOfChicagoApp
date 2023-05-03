@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 
 class DetailViewFragment : Fragment() {
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-		val galleryImageView = view.findViewById<ImageView>(R.id.detailArtworkImg)
-		setTransitionName(galleryImageView, "hero_image")
+		val detailImageView = view.findViewById<ImageView>(R.id.image_artwork_detailview)
+		setTransitionName(detailImageView, "hero_image")
 	}
 }

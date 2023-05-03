@@ -11,8 +11,10 @@ import com.example.artinstituteofchicagoapp.R
 import com.example.artinstituteofchicagoapp.data_classes.Data
 import com.squareup.picasso.Picasso
 
-class ImgAdapter(private val artworksList: MutableList<Data>) :
-	RecyclerView.Adapter<ImgAdapter.ViewHolder>() {
+class GalleryAdapter(private val artworksList: MutableList<Data>) :
+	RecyclerView.Adapter<GalleryAdapter.ViewHolder>() {
+	var onItemClick: ((Data) -> Unit)? = null
+
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 		val view = LayoutInflater.from(parent.context)
 			.inflate(R.layout.grid_member, parent, false)
@@ -27,10 +29,15 @@ class ImgAdapter(private val artworksList: MutableList<Data>) :
 		return artworksList.size
 	}
 
-	class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-		private var artworkImg = itemView.findViewById<ImageView>(R.id.gridArtworkImg)
-		private var artworkTitle = itemView.findViewById<TextView>(R.id.gridArtworkTitle)
-		private var artworkArtist = itemView.findViewById<TextView>(R.id.gridArtworkArtist)
+	inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+		private var artworkImg = itemView.findViewById<ImageView>(R.id.image_artwork_gridview)
+		private var artworkTitle = itemView.findViewById<TextView>(R.id.text_artwork_title_gridview)
+		private var artworkArtist =
+			itemView.findViewById<TextView>(R.id.text_artwork_artist_gridview)
+
+		init {
+			itemView.setOnClickListener { onItemClick?.invoke(artworksList[adapterPosition]) }
+		}
 
 		fun bind(artwork: Data) {
 			setTransitionName(artworkImg, artwork.id.toString())
