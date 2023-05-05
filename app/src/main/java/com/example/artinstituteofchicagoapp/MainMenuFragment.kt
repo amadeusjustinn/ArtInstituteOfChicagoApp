@@ -22,11 +22,10 @@ class MainMenuFragment : Fragment() {
 		val fragmentManager = activity?.supportFragmentManager
 		val btnShowArtworks = view.findViewById<Button>(R.id.button_show_artworks)
 		btnShowArtworks.setOnClickListener {
-			val galleryViewFragment = GalleryViewFragment()
 			val transaction = fragmentManager?.beginTransaction()
 			transaction?.apply {
 				setReorderingAllowed(true)
-				replace(R.id.navHostFragment, galleryViewFragment)
+				replace(R.id.navHostFragment, GalleryViewFragment())
 				addToBackStack(null)
 				commit()
 			}

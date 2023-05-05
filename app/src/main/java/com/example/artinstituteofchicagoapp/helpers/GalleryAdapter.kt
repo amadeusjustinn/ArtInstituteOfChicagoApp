@@ -31,9 +31,9 @@ class GalleryAdapter(private val artworksList: MutableList<Data>) :
 
 	inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 		private var artworkImg = itemView.findViewById<ImageView>(R.id.image_artwork_gridview)
-		private var artworkTitle = itemView.findViewById<TextView>(R.id.text_artwork_title_gridview)
+		private var artworkTitle = itemView.findViewById<TextView>(R.id.text_title_gridview)
 		private var artworkArtist =
-			itemView.findViewById<TextView>(R.id.text_artwork_artist_gridview)
+			itemView.findViewById<TextView>(R.id.text_artist_gridview)
 
 		init {
 			itemView.setOnClickListener { onItemClick?.invoke(artworksList[adapterPosition]) }

@@ -1,7 +1,6 @@
 package com.example.artinstituteofchicagoapp
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,11 +8,12 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.artinstituteofchicagoapp.data_classes.Data
+import com.example.artinstituteofchicagoapp.helpers.FromGalleryToDetail
 import com.example.artinstituteofchicagoapp.helpers.GalleryAdapter
 import com.example.artinstituteofchicagoapp.services.JsonService
 import kotlin.properties.Delegates
 
-class GalleryViewFragment : Fragment(), JsonService {
+class GalleryViewFragment : Fragment(), JsonService, FromGalleryToDetail {
 	private val artworksList = mutableListOf<Data>()
 	private val imgAdapter = GalleryAdapter(artworksList)
 	private val hasLoaded = HasLoaded(imgAdapter)
@@ -31,12 +31,6 @@ class GalleryViewFragment : Fragment(), JsonService {
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
 
-//		val recyclerView = view.findViewById<RecyclerView>(R.id.galleryView)
-//		val galleryImageView = recyclerView.findViewById<ImageView>(R.id.image_artwork_gridview)
-//		Log.d("type", recyclerView::class.java.typeName)
-//		setTransitionName(galleryImageView, "item_image")
-		imgAdapter.onItemClick = { artwork -> Log.d("clicked", artwork.title) }
-
 		recyclerView = view.findViewById(R.id.galleryView)
 		recyclerView?.apply {
 			setHasFixedSize(true)
@@ -45,6 +39,10 @@ class GalleryViewFragment : Fragment(), JsonService {
 		}
 
 		loadArtworks(artworksList, hasLoaded, context)
+
+		imgAdapter.onItemClick = { artwork ->
+			passData(artwork, this, activity?.supportFragmentManager)
+		}
 	}
 
 //	private fun prepareTransitions() {

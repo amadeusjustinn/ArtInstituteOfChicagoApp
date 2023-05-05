@@ -1,7 +1,7 @@
 package com.example.artinstituteofchicagoapp.data_classes
 
 data class DimensionsDetail(
-	val clarification: String,
+	val clarification: String?,
 	val depth_cm: Double,
 	val depth_in: Double,
 	val diameter_cm: Double,
