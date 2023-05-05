@@ -7,6 +7,7 @@ import kotlinx.parcelize.Parcelize
 data class DetailViewModel(
 	val artistDisplay: String,
 	val dateDisplay: String,
+	val image_id: String,
 	val mediumDisplay: String,
 	val placeOfOrigin: String?,
 	val title: String,

@@ -7,7 +7,7 @@
 
 	<ImageView
 		android:contentDescription="@string/grid_img"
-		android:id="@+id/image_artwork_gridview"
+		android:id="@+id/image_artwork_galleryview"
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		android:transitionName="image_small"
@@ -16,21 +16,21 @@
 		tools:srcCompat="@tools:sample/avatars" />
 
 	<TextView
-		android:id="@+id/text_title_gridview"
+		android:id="@+id/text_title_galleryview"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="8dp"
 		android:layout_width="wrap_content"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.5"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/image_artwork_gridview" />
+		app:layout_constraintTop_toBottomOf="@+id/image_artwork_galleryview" />
 
 	<TextView
-		android:id="@+id/text_artist_gridview"
+		android:id="@+id/text_artist_galleryview"
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.5"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/text_title_gridview" />
+		app:layout_constraintTop_toBottomOf="@+id/text_title_galleryview" />
 </androidx.constraintlayout.widget.ConstraintLayout>
