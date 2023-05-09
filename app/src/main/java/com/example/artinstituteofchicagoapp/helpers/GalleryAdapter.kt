@@ -43,6 +43,7 @@ class GalleryAdapter(private val artworksList: MutableList<Data>) :
 			setTransitionName(artworkImg, artwork.id.toString())
 			Picasso.get()
 				.load("https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg/")
+				.placeholder(R.drawable.ic_no_image_available)
 				.into(artworkImg)
 			artworkTitle.text = artwork.title
 			artworkArtist.text = artwork.artist_display
