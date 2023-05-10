@@ -29,6 +29,7 @@ class DetailViewFragment : Fragment() {
 		val img = view.findViewById<ImageView>(R.id.image_artwork_detailview)
 		Picasso.get()
 			.load("https://www.artic.edu/iiif/2/${viewModel.image_id}/full/843,/0/default.jpg/")
+			.placeholder(R.drawable.ic_no_image_available)
 			.into(img)
 
 		val title = view.findViewById<TextView>(R.id.text_title_detailview)

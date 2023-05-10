@@ -41,7 +41,7 @@ class GalleryViewFragment : Fragment(), JsonService, FromGalleryToDetail {
 		loadArtworks(artworksList, hasLoaded, context)
 
 		imgAdapter.onItemClick = { artwork ->
-			passData(artwork, this, activity?.supportFragmentManager)
+			passData(artwork, activity?.supportFragmentManager)
 		}
 	}
 

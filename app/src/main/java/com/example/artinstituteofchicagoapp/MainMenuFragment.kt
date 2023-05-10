@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction.TRANSIT_FRAGMENT_FADE
 
 class MainMenuFragment : Fragment() {
 	override fun onCreateView(
@@ -26,6 +27,7 @@ class MainMenuFragment : Fragment() {
 			transaction?.apply {
 				setReorderingAllowed(true)
 				replace(R.id.navHostFragment, GalleryViewFragment())
+				setTransition(TRANSIT_FRAGMENT_FADE)
 				addToBackStack(null)
 				commit()
 			}
